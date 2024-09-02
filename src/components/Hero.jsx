@@ -28,32 +28,33 @@ const Left = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 74px;
+  font-size: 120px;
 `;
 
-const WhatIDo = styled.div`
-  display: flex;
-  align-items: center;
-`;
+// const WhatIDo = styled.div`
+//   display: flex;
+//   align-items: center;
+// `;
 
-const Subtitle = styled.h2`
-  color: lightblue;
-`;
+// const Subtitle = styled.h2`
+//   color: lightblue;
+// `;
 
-const Desc = styled.p`
-  font-size: 24px;
-  color: lightgray;
-`;
+// const Desc = styled.p`
+//   font-size: 24px;
+//   color: lightgray;
+// `;
 
-const Button = styled.button`
-  width: 100px;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  font-weight: 500px;
-  color: black;
-  background-color: lightblue;
-`;
+// const Button = styled.button`
+//   width: 100px;
+//   border: none;
+//   border-radius: 5px;
+//   padding: 10px;
+//   font-weight: 500px;
+//   color: black;
+//   background-color: lightblue;
+//   cursor: pointer;
+// `;
 
 const Right = styled.div`
   flex: 3;
@@ -85,12 +86,12 @@ const Hero = () => {
       <Navbar/>
       <Container>
         <Left>
-          <Title>Welcome to my world, I am Naysa Chopra!</Title>
-          <WhatIDo>
+          <Title>Welcome to my mind.</Title>
+          {/* <WhatIDo>
             <Subtitle>What I do:</Subtitle>
           </WhatIDo>
           <Desc>I am a rising senior at UCSC studying Technology Information Management and am passionate about gaming, networking systems, front-end development, art, basketball, and using video games to bridge cultures globally.</Desc>
-          <Button>Learn More</Button>
+          <Button>Learn More</Button> */}
         </Left>
         <Right>
           {/* 3d model */}
