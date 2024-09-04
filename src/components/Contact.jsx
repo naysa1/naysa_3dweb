@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import emailjs from '@emailjs/browser';
 
 const Section = styled.div`
@@ -48,6 +48,20 @@ const Button = styled.button`
   padding: 20px;
   border-radius: 5px;
 ` 
+const spin = keyframes`
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+`;
+
+const Spinner = styled.div`
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid lightblue;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: ${spin} 1s linear infinite;
+`;
+
 const Right = styled.div`
   flex: 1;
 ` 
@@ -56,9 +70,11 @@ const Contact = () => {
   const ref = useRef();
 
   const [success,setSuccess] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .sendForm('service_tcs89vl', 'template_eap4aja', ref.current, {
@@ -67,11 +83,13 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setSuccess(true)
+          setLoading(false);
+          setSuccess(true);
         },
         (error) => {
           console.log(error.text);
-          setSuccess(false)
+          setLoading(false);
+          setSuccess(false);
         },
       );
   }
@@ -85,8 +103,10 @@ const Contact = () => {
             <Input placeholder="Name" name="name"/>
             <Input placeholder="Email" name="email"/>
             <TextArea placeholder="Write your message" name="message" rows={10}/>
-            <Button type="submit">Send</Button>
-            {success && "Your message has been sent! We will get back to you soon!"}
+            <Button type="submit" disabled={loading}>Send</Button>
+            {loading && <Spinner />}
+            {success === true && "Your message has been sent! We will get back to you soon!"}
+            {success === false && "Something went wrong. Please try again!"}
           </Form>
         </Left>
         <Right></Right>
