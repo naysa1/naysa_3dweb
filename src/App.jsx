@@ -11,33 +11,33 @@ const Container = styled.div`
   overflow-y: auto;
   scrollbar-width: none;
   color: white;
+  background: url("./img/background.png");
   &::-webkit-scrollbar{
     display: none;
   } 
 `; 
 
-const BackgroundVideo = styled.video`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  object-fit:cover;
-  z-index: -1;
-`
+// const BackgroundVideo = styled.video`
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100vh;
+//   object-fit:cover;
+//   z-index: -1;
+// `
 
 function App() {
   return (
     <Container>
-      <BackgroundVideo autoPlay loop muted>
+      {/* <BackgroundVideo autoPlay loop muted>
         <source src="public/vid/vid1.mp4" type="video/mp4" />
         Your browser does not support the video tag
-      </BackgroundVideo>
+      </BackgroundVideo> */}
       <Hero/>
       <Who/>
       <Works/>
       <Contact/>
-      <Test/>
     </Container>
   )
 }

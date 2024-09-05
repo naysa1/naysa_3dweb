@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
@@ -62,7 +63,6 @@ const Button = styled.button`
 const Who = () => {
   return (
     <Section>
-      
       <Container>
         <Left>
           {/* 3d model */}

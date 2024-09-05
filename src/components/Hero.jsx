@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Navbar from './Navbar'
+import House from './House'
 
 const Section = styled.div`
   height: 100vh;
@@ -61,25 +62,25 @@ const Right = styled.div`
   position: relative;
   
 `;
-const Iframe = styled.iframe`
-  border: none;
-  width: 800px;
-  height: 600px;
-  object-fit: contain;
-  position: absolute;
-  top:0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  animation: animate 2s infinite ease alternate;
+// const Iframe = styled.iframe`
+//   border: none;
+//   width: 800px;
+//   height: 600px;
+//   object-fit: contain;
+//   position: absolute;
+//   top:0;
+//   bottom: 0;
+//   right: 0;
+//   left: 0;
+//   margin: auto;
+//   animation: animate 2s infinite ease alternate;
 
-  @keyframes animate {
-    to{
-      transform: translateX(30px);
-    }
-  }
-`;
+//   @keyframes animate {
+//     to{
+//       transform: translateX(30px);
+//     }
+//   }
+// `;
 const Hero = () => {
   return (
     <Section>
@@ -95,7 +96,8 @@ const Hero = () => {
         </Left>
         <Right>
           {/* 3d model */}
-          <Iframe src="https://giphy.com/embed/xUW6eryj4aG1kOFxXs" />
+          {/* <Iframe src="https://giphy.com/embed/xUW6eryj4aG1kOFxXs" /> */}
+          <House/>
         </Right>
       </Container>
     </Section>
