@@ -4,19 +4,25 @@ import styled from 'styled-components'
 const data = [
   "Scratch Game",
   "P2P Project",
-  "Task Manager"
+  "Task Manager",
+  "TCP Router",
+  "DBMS"
 ];
 
 const description = [
   "A game developed using Scratch with the art and music being custom made by myself. Art however has been created through inspiration!",
   "A collaborative project focusing on peer-to-peer lending platform. Includes sprint analysis frameworks.",
-  "A python mini-project that creates a task manager in terminal, a GUI is on the way."
+  "A python mini-project that creates a task manager in terminal, a GUI is on the way.",
+  "Software-defined router that manages network traffic using subnet-specific records with Python.",
+  "Dental clinic database management system to handle records via PostgreSQL. Python functions implemented for queries and stored procedures."
 ];
 
 const links = [
   "https://scratch.mit.edu/projects/867324036",
   "public/downloads/PROJECT1.pdf",
-  "public/downloads/task_manager.py"
+  "public/downloads/task_manager.py",
+  "public/downloads/PGSQL_Project",
+  "public/downloads/TCP_Router_Project"
 ]
 
 const Section = styled.div`
@@ -42,7 +48,7 @@ const List = styled.ul`
   gap:20px;
 ` 
 const ListItem = styled.li`
-  font-size: 100px;
+  font-size: 80px;
   font-weight: bold;
   cursor: pointer;
   color: transparent;
