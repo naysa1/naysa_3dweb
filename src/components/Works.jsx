@@ -126,7 +126,20 @@ const Button = styled.button`
 
 const Right = styled.div`
   flex: 1;
+  position: relative;
 ` 
+const Img = styled.img`
+  width: 600px;
+  height: 600px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-bottom: 10%;
+`
 const Works = () => {
 
   const [selectedIndex, setSelectedIndex] = useState(null);
@@ -162,7 +175,9 @@ const Works = () => {
             ))}
           </List>
         </Left>
-        <Right></Right>
+        <Right>
+          <Img src='./img/coding.png'/>
+        </Right>
       </Container>
     </Section>
   )

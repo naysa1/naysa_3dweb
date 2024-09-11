@@ -4,6 +4,11 @@ import styled from 'styled-components'
 const Section = styled.div`
   display: flex;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
 `
 const Container = styled.div`
   width: 1400px;
@@ -47,20 +52,24 @@ const Button = styled.button`
 
 
 
-const Navbar = () => {
+const Navbar = ({ scrollToSection, homeRef, whoRef, worksRef, contactRef }) => {
+    const handleLinkedInClick = () => {
+        window.open("./downloads/Naysa_Resume.pdf", "_blank");
+      };
   return (
     <Section>
         <Container>
             <Links>
             <Logo src="./img/logo.png" />
             <List>
-                <ListItem>Home</ListItem>
-                <ListItem>Works</ListItem>
-                <ListItem>Contact</ListItem>
+                <ListItem onClick={() => scrollToSection(homeRef)}>Home</ListItem>
+                <ListItem onClick={() => scrollToSection(whoRef)}>About</ListItem>
+                <ListItem onClick={() => scrollToSection(worksRef)}>Works</ListItem>
+                <ListItem onClick={() => scrollToSection(contactRef)}>Contact</ListItem>
             </List>
             </Links>
             <Icons>
-                <Button>My Resume</Button>
+                <Button onClick={handleLinkedInClick}>My Resume</Button>
             </Icons>
         </Container>
     </Section>

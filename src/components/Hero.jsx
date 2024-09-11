@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { forwardRef } from "react";
 import styled from 'styled-components'
 import Navbar from './Navbar'
 // import House from './House'
 import {motion} from 'framer-motion'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Sphere, MeshDistortMaterial } from '@react-three/drei'
+
 
 const Section = styled.div`
   height: 100vh;
@@ -42,8 +43,8 @@ const Right = styled.div`
 `;
 
 const Img = styled.img`
-  width: 800px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   object-fit: contain;
   position: absolute;
   top: 0;
@@ -60,10 +61,10 @@ const Img = styled.img`
   }
 `
 
-const Hero = () => {
+const Hero = ({ scrollToSection, homeRef, whoRef, worksRef, contactRef }) => {
   return (
     <Section>
-      <Navbar/>
+      {/* <Navbar scrollToSection={scrollToSection} homeRef={homeRef }whoRef={whoRef} worksRef={worksRef} contactRef={contactRef}/> */}
       <Container>
         <Left>
           <Title
@@ -82,7 +83,7 @@ const Hero = () => {
               <MeshDistortMaterial color="#1a5c92" attatch="material" distort={0.5} speed={2}/>
             </Sphere>
           </Canvas>
-          <Img src="./img/naysa.png"/>
+          <Img src="./img/jellyfish.png"/>
         </Right>
       </Container>
     </Section>

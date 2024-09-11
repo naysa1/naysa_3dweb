@@ -24,7 +24,7 @@ const Container = styled.div`
 
 const Left = styled.div`
   flex: 1;
- 
+  position: relative;
 `;
 
 const Right = styled.div`
@@ -79,6 +79,24 @@ const Button = styled.button`
   font-weight: 500;
 `;
 
+const Img = styled.img`
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: animate 2s infinite ease alternate;
+  padding-bottom: 10%;
+  @keyframes animate {
+    to{
+      transform: translateY(20px);
+    }
+  }
+`
 const Fireflies = () => {
   const ref = useRef();
 
@@ -120,14 +138,18 @@ const Fireflies = () => {
 };
 
 const Who = () => {
+  const handleLinkedInClick = () => {
+    window.open("https://www.linkedin.com/in/naysa-chopra/", "_blank");
+  };
+
   return (
     <Section>
       <Container>
         <Left>
-          {/* <Canvas>
+          <Canvas>
             <Fireflies position={[0, 0, -1]}/>
-          </Canvas> */}
-          <ImCat position={[0, 0, 0]} />
+          </Canvas>
+          <Img src="./img/naysa.png"/>
         </Left>
         <Right>
           <Title>Hi! I am Naysa!</Title>
@@ -135,7 +157,7 @@ const Who = () => {
             <Subtitle>What I do:</Subtitle>
           </WhatIDo>
           <Desc>I am a rising senior at UCSC studying Technology Information Management and am passionate about networking systems, front-end development, art, basketball, and using video games to bridge cultures globally. </Desc>
-          <Button>Check out my Linkedin</Button>
+          <Button onClick={handleLinkedInClick}>Check out my Linkedin</Button>
         </Right>
       </Container>
     </Section>
