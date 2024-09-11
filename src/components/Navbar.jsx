@@ -29,10 +29,6 @@ const ListItem = styled.li`
     cursor: pointer;
 `
 
-const Icon = styled.img`
-    width: 50px;
-    cursor: pointer;
-`
 const Icons = styled.div`
     display: flex;
     align-items: center;
@@ -64,7 +60,6 @@ const Navbar = () => {
             </List>
             </Links>
             <Icons>
-                <Icon src="./img/instagram.svg" />
                 <Button>My Resume</Button>
             </Icons>
         </Container>

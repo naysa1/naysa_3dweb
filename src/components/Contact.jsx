@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 import emailjs from '@emailjs/browser';
-
+import House from './House';
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
@@ -18,6 +18,20 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  animation: scrolls linear;
+  animation-timeline: view();
+  animation-range: entry 0;
+
+  @keyframes scrolls {
+    from {
+      opacity: 0;
+      scale: 0.5;
+    } to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
 ` 
 const Title = styled.h1`
   font-weight: 200;
@@ -27,6 +41,7 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 25px;
+  
 ` 
 const Input = styled.input`
   padding: 20px;
@@ -65,6 +80,12 @@ const Spinner = styled.div`
 const Right = styled.div`
   flex: 1;
 ` 
+const Tel = styled.iframe`
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+`
 
 const Contact = () => {
   const ref = useRef();
@@ -109,7 +130,9 @@ const Contact = () => {
             {success === false && "Something went wrong. Please try again!"}
           </Form>
         </Left>
-        <Right></Right>
+        <Right>
+          <House />
+        </Right>
       </Container>
     </Section>
   )

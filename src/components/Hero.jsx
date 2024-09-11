@@ -1,7 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import Navbar from './Navbar'
-import House from './House'
+// import House from './House'
+import {motion} from 'framer-motion'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls, Sphere, MeshDistortMaterial } from '@react-three/drei'
 
 const Section = styled.div`
   height: 100vh;
@@ -28,76 +31,58 @@ const Left = styled.div`
   gap: 20px;
 `;
 
-const Title = styled.h1`
+const Title = styled(motion.h1)`
   font-size: 120px;
 `;
-
-// const WhatIDo = styled.div`
-//   display: flex;
-//   align-items: center;
-// `;
-
-// const Subtitle = styled.h2`
-//   color: lightblue;
-// `;
-
-// const Desc = styled.p`
-//   font-size: 24px;
-//   color: lightgray;
-// `;
-
-// const Button = styled.button`
-//   width: 100px;
-//   border: none;
-//   border-radius: 5px;
-//   padding: 10px;
-//   font-weight: 500px;
-//   color: black;
-//   background-color: lightblue;
-//   cursor: pointer;
-// `;
 
 const Right = styled.div`
   flex: 3;
   position: relative;
   
 `;
-// const Iframe = styled.iframe`
-//   border: none;
-//   width: 800px;
-//   height: 600px;
-//   object-fit: contain;
-//   position: absolute;
-//   top:0;
-//   bottom: 0;
-//   right: 0;
-//   left: 0;
-//   margin: auto;
-//   animation: animate 2s infinite ease alternate;
 
-//   @keyframes animate {
-//     to{
-//       transform: translateX(30px);
-//     }
-//   }
-// `;
+const Img = styled.img`
+  width: 800px;
+  height: 600px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: animate 2s infinite ease alternate;
+  padding-bottom: 10%;
+  @keyframes animate {
+    to{
+      transform: translateY(20px);
+    }
+  }
+`
+
 const Hero = () => {
   return (
     <Section>
       <Navbar/>
       <Container>
         <Left>
-          <Title>Welcome to my mind.</Title>
-          {/* <WhatIDo>
-            <Subtitle>What I do:</Subtitle>
-          </WhatIDo>
-          <Desc>I am a rising senior at UCSC studying Technology Information Management and am passionate about gaming, networking systems, front-end development, art, basketball, and using video games to bridge cultures globally.</Desc>
-          <Button>Learn More</Button> */}
+          <Title
+            initial={{ opacity: 0, y: 0}}
+            animate={{ opacity: 1, y: 20 }}
+            transition= {{ duration: 1}}
+          >
+            Welcome to my mind.</Title>      
         </Left>
         <Right>
-          {/* 3d model */}
-          {/* <Iframe src="https://giphy.com/embed/xUW6eryj4aG1kOFxXs" /> */}
-          <House/>
+          <Canvas>
+            <OrbitControls enableZoom={false} autoRotate />
+            <ambientLight intensity={1} />
+            <directionalLight position={[3,2,1]} />
+            <Sphere args={[1, 100, 200]} scale={2.6}>
+              <MeshDistortMaterial color="#1a5c92" attatch="material" distort={0.5} speed={2}/>
+            </Sphere>
+          </Canvas>
+          <Img src="./img/naysa.png"/>
         </Right>
       </Container>
     </Section>

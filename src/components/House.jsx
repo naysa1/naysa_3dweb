@@ -8,7 +8,7 @@ const House = () => {
   return (
     <Canvas>
         <Stage environment="city" intensity={0.6}>       
-            <Medieval scale={[1.4, 1.4, 1.4]} />
+            <Medieval scale={[2, 2, 2]} />
         </Stage>
         <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={2}/>
     </Canvas>

@@ -46,6 +46,31 @@ const List = styled.ul`
   display: flex;
   flex-direction: column;
   gap:20px;
+  animation: scrolls linear;
+  animation-timeline: view();
+  animation-range: entry 0;
+
+  @keyframes scrolls {
+    from {
+      opacity: 0;
+      scale: 0.5;
+    } to {
+      opacity: 1;
+      scale: 1;
+    }
+  }  animation: scrolls linear;
+  animation-timeline: view();
+  animation-range: entry 0;
+
+  @keyframes scrolls {
+    from {
+      opacity: 0;
+      scale: 0.5;
+    } to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
 ` 
 const ListItem = styled.li`
   font-size: 80px;
