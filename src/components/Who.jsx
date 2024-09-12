@@ -25,6 +25,10 @@ const Container = styled.div`
 const Left = styled.div`
   flex: 1;
   position: relative;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Right = styled.div`
@@ -37,6 +41,12 @@ const Right = styled.div`
   animation: scrolls linear;
   animation-timeline: view();
   animation-range: entry 0;
+
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+    padding: 2px;
+  }
 
   @keyframes scrolls {
     from {
@@ -51,6 +61,10 @@ const Right = styled.div`
 
 const Title = styled.h1`
   font-size: 74px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 60px;
+  }
 `;
 
 const WhatIDo = styled.div`

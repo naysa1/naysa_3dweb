@@ -35,11 +35,22 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   width: 1400px;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+  }
 ` 
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+  }
 ` 
 const List = styled.ul`
   list-style: none;
@@ -50,6 +61,7 @@ const List = styled.ul`
   animation-timeline: view();
   animation-range: entry 0;
 
+
   @keyframes scrolls {
     from {
       opacity: 0;
@@ -59,6 +71,7 @@ const List = styled.ul`
       scale: 1;
     }
   }  animation: scrolls linear;
+  
   animation-timeline: view();
   animation-range: entry 0;
 
@@ -80,6 +93,13 @@ const ListItem = styled.li`
   -webkit-text-stroke: 1px lightblue;
   position: relative;
 
+  @media only screen and (max-width: 768px) {
+    font-size: 24px;
+    color: lightblue;
+    -webkit-text-stroke: 0px;
+    animation: none;
+  }
+
   &::after {
     content: "${(props)=>props.text}";
     position: absolute;
@@ -93,7 +113,12 @@ const ListItem = styled.li`
 
   &:hover {
     &::after {
+      
       animation: moveText 0.5s linear both;
+
+      @media only screen and (max-width: 768px) {
+        animation: none;
+      }
       @keyframes moveText {
         to{
           width: 100%;
@@ -107,6 +132,11 @@ const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
+
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Description = styled.div`
@@ -127,6 +157,10 @@ const Button = styled.button`
 const Right = styled.div`
   flex: 1;
   position: relative;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 ` 
 const Img = styled.img`
   width: 600px;
@@ -139,6 +173,7 @@ const Img = styled.img`
   right: 0;
   margin: auto;
   padding-bottom: 10%;
+  
 `
 const Works = () => {
 

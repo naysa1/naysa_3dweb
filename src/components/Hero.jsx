@@ -14,14 +14,25 @@ const Section = styled.div`
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    height: 200vh;
+  }
 `;
 
 const Container = styled.div`
-  height: 100vh;
+  height: 100%;
   scroll-snap-align: center;
   width: 1400px;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 `;
 
 const Left = styled.div`
@@ -30,15 +41,29 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+    align-items: center;
+  }
 `;
 
 const Title = styled(motion.h1)`
   font-size: 120px;
+
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+    font-size: 74px;
+  }
 `;
 
 const Right = styled.div`
   flex: 3;
   position: relative;
+
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+  }
   
 `;
 
@@ -54,6 +79,10 @@ const Img = styled.img`
   margin: auto;
   animation: animate 2s infinite ease alternate;
   padding-bottom: 10%;
+  @media only screen and (max-width: 768px) {
+    width: 300px;
+    height: 300px;
+  }
   @keyframes animate {
     to{
       transform: translateY(20px);

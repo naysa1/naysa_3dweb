@@ -9,6 +9,10 @@ const Section = styled.div`
   width: 100%;
   z-index: 1000;
   background-color: transparent;
+
+  @media only screen and (max-width: 768px) {
+    width: 80%;
+  }
 `
 const Container = styled.div`
   width: 1400px;
@@ -16,14 +20,24 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px 0px;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 `
 const Links = styled.div`
     display: flex;
     align-items: center;
     gap: 50px;
+    @media only screen and (max-width: 768px) {
+        padding: 15px;
+    }
 `
 const Logo = styled.img`
     height: 90px;
+    @media only screen and (max-width: 768px) {
+        display: none;
+  }
 `
 const List = styled.ul`
     display: flex;

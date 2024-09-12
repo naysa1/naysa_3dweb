@@ -23,6 +23,10 @@ const Left = styled.div`
   animation-timeline: view();
   animation-range: entry 0;
 
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+  }
+
   @keyframes scrolls {
     from {
       opacity: 0;
@@ -42,6 +46,9 @@ const Form = styled.form`
   flex-direction: column;
   gap: 25px;
   
+  @media only screen and (max-width: 768px) {
+    width: 300px;
+  }
 ` 
 const Input = styled.input`
   padding: 20px;
@@ -79,6 +86,9 @@ const Spinner = styled.div`
 
 const Right = styled.div`
   flex: 1;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 ` 
 const Tel = styled.iframe`
   width: 300px;
