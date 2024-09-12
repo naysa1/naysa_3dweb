@@ -21,8 +21,8 @@ const links = [
   "https://scratch.mit.edu/projects/867324036",
   "./downloads/PROJECT1.pdf",
   "https://github.com/naysa1/Task_Manager",
+  "https://github.com/naysa1/TCP_Router",
   "https://github.com/naysa1/Dentist_Database",
-  "https://github.com/naysa1/TCP_Router"
 ]
 
 const Section = styled.div`
