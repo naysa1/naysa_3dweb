@@ -170,7 +170,7 @@ const Who = () => {
           <WhatIDo>
             <Subtitle>What I do:</Subtitle>
           </WhatIDo>
-          <Desc>I am a rising senior at UCSC studying Technology Information Management and am passionate about networking systems, front-end development, art, basketball, and using video games to bridge cultures globally. </Desc>
+          <Desc>I am a rising senior at UCSC pursuing a degree in Technology Information Management. My passions span across networking systems, front-end development, and project management. I also enjoy basketball and am enthusiastic about leveraging video games to connect and bridge cultures globally." </Desc>
           <Button onClick={handleLinkedInClick}>Check out my Linkedin</Button>
         </Right>
       </Container>

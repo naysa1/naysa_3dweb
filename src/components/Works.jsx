@@ -19,7 +19,7 @@ const description = [
 
 const links = [
   "https://scratch.mit.edu/projects/867324036",
-  "public/downloads/PROJECT1.pdf",
+  "./downloads/PROJECT1.pdf",
   "https://github.com/naysa1/Task_Manager",
   "https://github.com/naysa1/Dentist_Database",
   "https://github.com/naysa1/TCP_Router"
