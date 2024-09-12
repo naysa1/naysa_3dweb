@@ -33,4 +33,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('/medieval-transformed.glb')
+useGLTF.preload('/3dwebsite/medieval-transformed.glb')
