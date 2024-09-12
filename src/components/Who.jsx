@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import React, { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import ImCat from './ImCat';
+
 
 
 
