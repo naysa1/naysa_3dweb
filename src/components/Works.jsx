@@ -20,9 +20,9 @@ const description = [
 const links = [
   "https://scratch.mit.edu/projects/867324036",
   "public/downloads/PROJECT1.pdf",
-  "public/downloads/task_manager.py",
-  "public/downloads/PGSQL_Project",
-  "public/downloads/TCP_Router_Project"
+  "https://github.com/naysa1/Task_Manager",
+  "https://github.com/naysa1/Dentist_Database",
+  "https://github.com/naysa1/TCP_Router"
 ]
 
 const Section = styled.div`
@@ -183,11 +183,15 @@ const Works = () => {
     setSelectedIndex(index === selectedIndex ? null : index);
   };
 
+  const handleButtonClick = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <Section>
       <Container>
         <Left>
-          <List>         
+          <List>
             {data.map((item, index) => (
               <div key={index}>
                 <ListItem onClick={() => handleClick(index)} text={item}>
@@ -196,13 +200,8 @@ const Works = () => {
                 {selectedIndex === index && (
                   <DescriptionContainer>
                     <Description>{description[index]}</Description>
-                    <Button 
-                      href={links[index]} 
-                      target={links[index].includes('/downloads/') ? "_self" : "_blank"} 
-                      rel={links[index].includes('/downloads/') ? "" : "noopener noreferrer"} 
-                      download={!!links[index].includes('/downloads/')}
-                    >
-                      {links[index].includes('/downloads/') ? "Download" : "View Project"}
+                    <Button onClick={() => handleButtonClick(links[index])}>
+                      View Project
                     </Button>
                   </DescriptionContainer>
                 )}

@@ -131,8 +131,8 @@ const Contact = () => {
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Contact Me</Title>
-            <Input placeholder="Name" name="name"/>
-            <Input placeholder="Email" name="email"/>
+            <Input placeholder="Name" name="name" required/>
+            <Input placeholder="Email" name="email" type="email" required/>
             <TextArea placeholder="Write your message" name="message" rows={10}/>
             <Button type="submit" disabled={loading}>Send</Button>
             {loading && <Spinner />}
