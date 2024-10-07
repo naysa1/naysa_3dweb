@@ -1,0 +1,74 @@
+{
+  "hash": "99480b51",
+  "browserHash": "635d9c7c",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "fa9ea5b1",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "268b4f8b",
+      "needsInterop": true
+    },
+    "styled-components": {
+      "src": "../../node_modules/styled-components/dist/styled-components.browser.esm.js",
+      "file": "styled-components.js",
+      "fileHash": "de54752d",
+      "needsInterop": false
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "d7359916",
+      "needsInterop": false
+    },
+    "@react-three/fiber": {
+      "src": "../../node_modules/@react-three/fiber/dist/react-three-fiber.esm.js",
+      "file": "@react-three_fiber.js",
+      "fileHash": "f8475043",
+      "needsInterop": false
+    },
+    "@react-three/drei": {
+      "src": "../../node_modules/@react-three/drei/index.js",
+      "file": "@react-three_drei.js",
+      "fileHash": "185999ef",
+      "needsInterop": false
+    },
+    "@emailjs/browser": {
+      "src": "../../node_modules/@emailjs/browser/es/index.js",
+      "file": "@emailjs_browser.js",
+      "fileHash": "0c82ca04",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "vision_bundle-AXWP4BN4": {
+      "file": "vision_bundle-AXWP4BN4.js"
+    },
+    "chunk-KK74KSUI": {
+      "file": "chunk-KK74KSUI.js"
+    },
+    "chunk-CLXPCDSX": {
+      "file": "chunk-CLXPCDSX.js"
+    },
+    "chunk-S4HJT5PH": {
+      "file": "chunk-S4HJT5PH.js"
+    },
+    "chunk-V3RDUC7K": {
+      "file": "chunk-V3RDUC7K.js"
+    },
+    "chunk-UMBEC6V5": {
+      "file": "chunk-UMBEC6V5.js"
+    },
+    "hls-EDYLMHKX": {
+      "file": "hls-EDYLMHKX.js"
+    },
+    "chunk-ROME4SDB": {
+      "file": "chunk-ROME4SDB.js"
+    }
+  }
+}
