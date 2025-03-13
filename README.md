@@ -1,5 +1,6 @@
 # 3D Portfolio Website
 3D Dynamic website portfolio with Three.js in React built with Vite. 
+url: https://naysa1.github.io/naysa_3dweb/
 
 Credits: 
 - website inspired from (https://www.youtube.com/watch?v=qALsVa-V9qo&t=4815s&ab_channel=LamaDev)
